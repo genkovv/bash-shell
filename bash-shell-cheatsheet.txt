@@ -1,0 +1,2 @@
+Ways to test availability of remote port:
+$ nc -zv 127.0.0.1 80
