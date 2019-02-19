@@ -1,2 +1,16 @@
 Ways to test availability of remote port:
 $ nc -zv 127.0.0.1 80
+------------------------------
+To list all services:
+$systemctl list-unit-files
+
+The syntax is:
+$ systemctl
+$ systemctl | more
+$ systemctl | grep httpd
+$ systemctl list-units --type service
+$systemctl list-units --type mount
+--------------------------------
+Count number of lines:
+$ wc -l
+
