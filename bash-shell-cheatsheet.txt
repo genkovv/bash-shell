@@ -9,8 +9,19 @@ $ systemctl
 $ systemctl | more
 $ systemctl | grep httpd
 $ systemctl list-units --type service
-$systemctl list-units --type mount
+$ systemctl list-units --type mount
+
+Check service status:
+
+$ systemctl status sshd.service
+$ systemctl is-active sshd
+$ systemctl is-enabled sshd
 --------------------------------
 Count number of lines:
 $ wc -l
 
+--------------------------------
+Export and import iptables rules
+
+$ iptables-save > /opt/iptables-export
+$ iptables-restore < /opt/iptables-export
