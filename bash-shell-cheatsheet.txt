@@ -25,3 +25,8 @@ Export and import iptables rules
 
 $ iptables-save > /opt/iptables-export
 $ iptables-restore < /opt/iptables-export
+
+--------------------------------
+Check network connections either using source or destination port 6443 and additional info for each connection
+
+$ netstat -tanp -e |awk 'NR == 2 || /6443/'
